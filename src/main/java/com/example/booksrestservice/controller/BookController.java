@@ -1,11 +1,12 @@
 package com.example.booksrestservice.controller;
 
+import com.example.booksrestservice.exceptions.ObjectNotFoundException;
+import com.example.booksrestservice.model.AuthorRating;
 import com.example.booksrestservice.model.Book;
 import com.example.booksrestservice.service.BookService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
 
@@ -21,7 +22,21 @@ public class BookController {
 
     @GetMapping(value = "/{isbn}")
     public Book findByIsbn(@PathVariable("isbn") String isbn){
-        return bookService.findByIsbn(isbn);
+            return bookService.findByIsbn(isbn);
     }
 
+    @GetMapping("/categories/{category}")
+    public List<Book> findByCategory(@PathVariable("category") String category){
+        return bookService.findByCategory(category);
+    }
+
+    @GetMapping("/rating")
+    public List<AuthorRating> findAuthorsRating(){
+        return bookService.findAuthorsRating();
+    }
+
+    @ExceptionHandler(ObjectNotFoundException.class)
+    public void catchObjectNotFoundException(ObjectNotFoundException ex){
+        throw new ResponseStatusException(HttpStatus.NOT_FOUND,"Book not found", ex);
+    }
 }

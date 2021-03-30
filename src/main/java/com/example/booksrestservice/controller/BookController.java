@@ -40,6 +40,11 @@ public class BookController {
         return bookService.findWithMorePages(pages);
     }
 
+    @GetMapping("/bestbooks/{pagesPerHour}/{avgHoursPerDay}")
+    public List<Book> findByAvgRatingAndCanBeReadInMonth(@PathVariable Integer pagesPerHour, @PathVariable Integer avgHoursPerDay){
+        return bookService.findByAvgRatingAndCanBeReadInMonth(pagesPerHour, avgHoursPerDay);
+    }
+
     @ExceptionHandler(ObjectNotFoundException.class)
     public void catchObjectNotFoundException(ObjectNotFoundException ex){
         throw new ResponseStatusException(HttpStatus.NOT_FOUND,"Book not found", ex);

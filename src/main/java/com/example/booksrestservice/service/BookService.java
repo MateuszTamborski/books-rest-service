@@ -33,9 +33,9 @@ public class BookService {
     public List<AuthorRating> findAuthorsRating(){
         List<AuthorRating> authorRatingsList = new ArrayList<>();
         List<String> authors = listOfBooks.stream()
-                                          .flatMap(a->a.getAuthors().stream())
-                                          .distinct()
-                                          .collect(Collectors.toList());
+                                    .flatMap(a->a.getAuthors().stream())
+                                    .distinct()
+                                    .collect(Collectors.toList());
 
         for (String author: authors) {
             double avgRating = listOfBooks.stream().filter(book -> book.getAuthors().contains(author))
@@ -59,9 +59,19 @@ public class BookService {
 
     public Book findWithMorePages(Integer pages){
         return listOfBooks.stream()
-                          .filter(book -> book.getPageCount() != null)
-                          .filter(book -> book.getPageCount() > pages)
-                          .findFirst()
-                          .orElseThrow(ObjectNotFoundException::new);
+                .filter(book -> book.getPageCount() != null)
+                .filter(book -> book.getPageCount() > pages)
+                .findFirst()
+                .orElseThrow(ObjectNotFoundException::new);
+    }
+
+    public List<Book> findByAvgRatingAndCanBeReadInMonth(Integer pagesPerHour, Integer avgHoursPerDay) {
+        Integer pagesPerUserInMonth = pagesPerHour*avgHoursPerDay*30;
+        return listOfBooks.stream()
+                .filter(book -> book.getAverageRating() != null)
+                .filter(book -> book.getPageCount() != null)
+                .filter(book -> book.getPageCount() <= pagesPerUserInMonth)
+                .sorted(Comparator.comparing(Book::getAverageRating).reversed())
+                .collect(Collectors.toList());
     }
 }

@@ -35,6 +35,11 @@ public class BookController {
         return bookService.findAuthorsRating();
     }
 
+    @GetMapping("/volume/{pages}")
+    public Book findWithMorePages(@PathVariable("pages") Integer pages){
+        return bookService.findWithMorePages(pages);
+    }
+
     @ExceptionHandler(ObjectNotFoundException.class)
     public void catchObjectNotFoundException(ObjectNotFoundException ex){
         throw new ResponseStatusException(HttpStatus.NOT_FOUND,"Book not found", ex);

@@ -4,17 +4,13 @@ import com.example.booksrestservice.BooksMapper;
 import com.example.booksrestservice.exceptions.ObjectNotFoundException;
 import com.example.booksrestservice.model.AuthorRating;
 import com.example.booksrestservice.model.Book;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
 public class BookService {
-
-    @Autowired
     private final List<Book> listOfBooks = new BooksMapper().mapObjects();
 
     public List<Book> findAll(){
@@ -42,7 +38,7 @@ public class BookService {
                                           .collect(Collectors.toList());
 
         for (String author: authors) {
-            Double avgRating = listOfBooks.stream().filter(book -> book.getAuthors().contains(author))
+            double avgRating = listOfBooks.stream().filter(book -> book.getAuthors().contains(author))
                     .filter(book -> {
                         Double avg = book.getAverageRating();
                         return avg != null;
@@ -59,5 +55,13 @@ public class BookService {
         return authorRatingsList.stream()
                 .sorted(Comparator.comparing(AuthorRating::getAverageRating).reversed())
                 .collect(Collectors.toList());
+    }
+
+    public Book findWithMorePages(Integer pages){
+        return listOfBooks.stream()
+                          .filter(book -> book.getPageCount() != null)
+                          .filter(book -> book.getPageCount() > pages)
+                          .findFirst()
+                          .orElseThrow(ObjectNotFoundException::new);
     }
 }

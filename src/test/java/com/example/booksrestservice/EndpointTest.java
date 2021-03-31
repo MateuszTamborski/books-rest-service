@@ -1,12 +1,24 @@
 package com.example.booksrestservice;
 
+import io.restassured.RestAssured;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.*;
 
-
+@ExtendWith(SpringExtension.class)
+@SpringBootTest(webEnvironment= SpringBootTest.WebEnvironment.DEFINED_PORT)
 class EndpointTest {
+
+    @BeforeAll
+    static void setup() {
+        RestAssured.baseURI = "http://localhost";
+        RestAssured.port = 8080;
+    }
 
     @Test
     void findAllBooksShouldReturnAllBooks() {

@@ -17,8 +17,8 @@ import java.util.List;
 
 public class BooksMapper {
 
-    public JsonNode readFromJson(){
-        try(InputStream inputStream = Thread.currentThread().getContextClassLoader().getResourceAsStream("books.json")){
+    public JsonNode readFromJson(String bookFile){
+        try(InputStream inputStream = Thread.currentThread().getContextClassLoader().getResourceAsStream(bookFile)){
             ObjectMapper objectMapper = new ObjectMapper();
             JsonNode jsonNode = objectMapper.readTree(inputStream);
             return jsonNode.get("items");
@@ -28,9 +28,9 @@ public class BooksMapper {
         }
     }
 
-    public List<Book> mapObjects(){
+    public List<Book> mapObjects(String resource){
         List<Book> books = new ArrayList<>();
-        JsonNode items = readFromJson();
+        JsonNode items = readFromJson(resource);
         items.forEach(x -> {
             JsonNode volumeInfo = x.get("volumeInfo");
             books.add(Book.builder()

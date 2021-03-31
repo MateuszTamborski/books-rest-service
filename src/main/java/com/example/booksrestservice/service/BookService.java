@@ -4,14 +4,16 @@ import com.example.booksrestservice.BooksMapper;
 import com.example.booksrestservice.exceptions.ObjectNotFoundException;
 import com.example.booksrestservice.model.AuthorRating;
 import com.example.booksrestservice.model.Book;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
+@Service
 public class BookService {
-    private final List<Book> listOfBooks = new BooksMapper().mapObjects();
+    private final List<Book> listOfBooks = new BooksMapper().mapObjects("books.json");
 
     public List<Book> findAll(){
         return listOfBooks;

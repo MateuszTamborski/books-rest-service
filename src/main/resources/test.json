@@ -1,0 +1,176 @@
+{
+  "kind": "books#volumes",
+  "totalItems": 550,
+  "items": [
+    {
+      "kind": "books#volume",
+      "id": "Q3_QDwAAQBAJ",
+      "etag": "mdTeJki0VI4",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/Q3_QDwAAQBAJ",
+      "volumeInfo": {
+        "title": "Java Performance",
+        "subtitle": "In-Depth Advice for Tuning and Programming Java 8, 11, and Beyond",
+        "authors": [
+          "Scott Oaks"
+        ],
+        "publisher": "O'Reilly Media",
+        "publishedDate": "2020-02-11",
+        "description": "Coding and testing are generally considered separate areas of expertise. In this practical book, Java expert Scott Oaks takes the approach that anyone who works with Java should be adept at understanding how code behaves in the Java Virtual Machine—including the tunings likely to help performance. This updated second edition helps you gain in-depth knowledge of Java application performance using both the JVM and the Java platform. Developers and performance engineers alike will learn a variety of features, tools, and processes for improving the way the Java 8 and 11 LTS releases perform. While the emphasis is on production-supported releases and features, this book also features previews of exciting new technologies such as ahead-of-time compilation and experimental garbage collections. Understand how various Java platforms and compilers affect performance Learn how Java garbage collection works Apply four principles to obtain best results from performance testing Use the JDK and other tools to learn how a Java application is performing Minimize the garbage collector’s impact through tuning and programming practices Tackle performance issues in Java APIs Improve Java-driven database application performance",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9781492056089"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "1492056081"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": true
+        },
+        "pageCount": 450,
+        "printType": "BOOK",
+        "categories": [
+          "Computers"
+        ],
+        "averageRating": 3.0,
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "0.1.0.0.preview.1",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=Q3_QDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=Q3_QDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.pl/books?id=Q3_QDwAAQBAJ&pg=PA3&dq=java&hl=&cd=1&source=gbs_api",
+        "infoLink": "http://books.google.pl/books?id=Q3_QDwAAQBAJ&dq=java&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Java_Performance.html?hl=&id=Q3_QDwAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "PL",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "PL",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=Q3_QDwAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "In-Depth Advice for Tuning and Programming \u003cb\u003eJava\u003c/b\u003e 8, 11, and Beyond Scott Oaks\u003cbr\u003e\n. \u003cb\u003eJava\u003c/b\u003e. Platforms. This book covers the performance of the Oracle HotSpot \u003cb\u003eJava\u003c/b\u003e \u003cbr\u003e\nVirtual Machine (JVM) and the \u003cb\u003eJava\u003c/b\u003e Development Kit (JDK), versions 8 and 11."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "J0C7DwAAQBAJ",
+      "etag": "/BkblHRA6t8",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/J0C7DwAAQBAJ",
+      "volumeInfo": {
+        "title": "The The Java Workshop",
+        "subtitle": "Learn object-oriented programming and kickstart your career in software development",
+        "authors": [
+          "David Cuartielles",
+          "Andreas Göransson",
+          "Eric Foster-Johnson"
+        ],
+        "publisher": "Packt Publishing Ltd",
+        "publishedDate": "2019-10-31",
+        "description": "This Java book will guide you through Java development and help you build the knowledge and confidence to progress from the basics to become a skilled Java developer. All the key tools that you'll need to solve real-world problems are clearly explained and demonstrated with engaging, practical examples.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_10",
+            "identifier": "1839218118"
+          }
+        ],
+        "readingModes": {
+          "text": true,
+          "image": true
+        },
+        "pageCount": 606,
+        "printType": "BOOK",
+        "categories": [
+          "Computers"
+        ],
+        "averageRating": 5.0,
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "2.10.11.0.preview.3",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=J0C7DwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=J0C7DwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.pl/books?id=J0C7DwAAQBAJ&pg=PA170&dq=java&hl=&cd=2&source=gbs_api",
+        "infoLink": "https://play.google.com/store/books/details?id=J0C7DwAAQBAJ&source=gbs_api",
+        "canonicalVolumeLink": "https://play.google.com/store/books/details?id=J0C7DwAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "PL",
+        "saleability": "FOR_SALE",
+        "isEbook": true,
+        "listPrice": {
+          "amount": 109.72,
+          "currencyCode": "PLN"
+        },
+        "retailPrice": {
+          "amount": 76.8,
+          "currencyCode": "PLN"
+        },
+        "buyLink": "https://play.google.com/store/books/details?id=J0C7DwAAQBAJ&rdid=book-J0C7DwAAQBAJ&rdot=1&source=gbs_api",
+        "offers": [
+          {
+            "finskyOfferType": 1,
+            "listPrice": {
+              "amountInMicros": 109720000,
+              "currencyCode": "PLN"
+            },
+            "retailPrice": {
+              "amountInMicros": 76800000,
+              "currencyCode": "PLN"
+            }
+          }
+        ]
+      },
+      "accessInfo": {
+        "country": "PL",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": true
+        },
+        "pdf": {
+          "isAvailable": true
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=J0C7DwAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "Any sophisticated \u003cb\u003eJava\u003c/b\u003e application will require many separate \u003cb\u003eJava\u003c/b\u003e classes. \u003cb\u003eJava\u003c/b\u003e \u003cbr\u003e\nprovides several ways to help you organize your classes; one of which is the \u003cbr\u003e\nconcept of packages. You can collect multiple compiled packages together into a\u003cbr\u003e\n&nbsp;..."
+      }
+    }
+  ]
+}
